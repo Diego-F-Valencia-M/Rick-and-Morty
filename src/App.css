@@ -1,38 +1,172 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+/* reglas universales */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Eliminar margenes predeterminadas */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Eliminar estilos de lista en elementos ul, ol con un rol de lista, lo que sugiere que se eliminará el estilo predeterminado */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Establecer valores predeterminados */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* 
+Establecer valores predeterminados del body */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+  background-image: url(./fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Hubballi', cursive;
+  font-size: 1.3rem;
+}
+
+/* las imagenes son mas faciles de trabajar */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* fuentes heredadas para entradas y botones */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.App{
+  width: 100%;
+}
+
+.hero{
+  margin: 0 auto;
+}
+
+.wrapper{
+  width: min(90%, 1000px);
+  margin: 2rem auto;
+  border-radius: 30px;
+  padding: 1rem;
+}
+.blue-700{
+  background-color: #00c6aa;
+}
+
+.resident-info{
+  width: max(48%, 300px);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 0 auto;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.resident-info span{
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resident-img{
+  margin: 0 auto;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.location-info{
+  padding-left: 0;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.location-info span{
+  font-weight: bold;
+  color: #008eff;
+  font-size: 1.7rem;
+}
+
+h2{
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.description{
+  color: gray;
+}
+
+.d-flex{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form{
+  display: flex;
+  justify-content: space-between;
+}
+
+input{
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 20px 0 0 20px;
+}
+
+.form-button{
+  border: none;
+  background-color: #00b0ff;
+  padding: 0.5rem;
+  margin-left: 2px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
+
+.pagination-button{
+  border: none;
+  background-color: #11d452;
+  margin-left: 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding-inline: 1rem;
+}
+
+.Pagination-residentlist{
+  margin-block: 2rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-wrap: wrap;
+  gap: 1rem;
 }
