@@ -40,6 +40,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.2;
   background-image: url(./fondo.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
